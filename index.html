@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Design World — Исследуйте новые идеи</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Poppins — по спецификации; Montserrat добавлен только потому, что в Poppins нет кириллицы -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{"imports":{
+  "three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+  "three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+}}
+</script>
+</head>
+<body>
+<section class="hero" id="hero">
+  <canvas id="scene" aria-label="Вращаемый стеклянный куб. Потяните, чтобы повернуть."></canvas>
+  <div class="ui">
+    <h1 class="sr-only">Исследуйте новые идеи</h1>
+    <header class="nav">
+      <a href="#" class="logo"><i class="logo-mark"></i><b>Design</b><span>World</span></a>
+      <ul class="nav-links">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Портфолио</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </header>
+    <div class="arrows">
+      <button class="arrow" id="prev" aria-label="Повернуть влево"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+      <button class="arrow" id="next" aria-label="Повернуть вправо"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+    <nav class="dots" aria-label="Слайды"><button class="dot" aria-label="Слайд 1"></button><button class="dot active" aria-label="Слайд 2"></button><button class="dot" aria-label="Слайд 3"></button></nav>
+    <p class="tagline">Создадим<br>будущее <strong>дизайна.</strong></p>
+    <div class="cta-row">
+      <a href="#" class="cta">Смотреть работы</a>
+      <span class="cta-line"></span>
+      <span class="count" aria-hidden="true">07</span>
+    </div>
+    <div class="loader" id="loader">Загрузка модели</div>
+  </div>
+</section>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
